@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+
+ //optimised code for bouble sort algo.
+
+void boublesortalgo(int arr[],int n){
+    int i,j;
+    bool ans =false;
+    for(i=0;i<n;i++){
+        bool ans =false;
+        for(j=0;j<n-i;j++){
+            if(arr[j]>arr[j+1]){
+                int p=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=p;
+                ans=true;
+            }
+        }
+        if(ans==false)
+            break;
+    }
+    for(i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+}
+
+int main(){
+    int arr[6]={9,3,15,30,5,0};
+    boublesortalgo(arr,6);
+    return 0;
+}
